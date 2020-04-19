@@ -1,0 +1,151 @@
+/*Davis' Tic Tac Toe - CSS
+ This text is the design aspect of the game and it's functions. It handles all the styling for it using CSS
+ By Davis Lenover
+ April 14th, 2020
+ Please refer to the header in Main.java for instructions on operation of the game
+*/
+
+/*All general stylistics are defined here (the "."). "Times New Roman" is the main font for the program*/
+.winning-button{
+	-fx-background-color: radial-gradient( radius 100%, white, lightyellow, lawngreen);
+}
+.tie-button{
+	-fx-background-color: radial-gradient( radius 100%, white, red, lawngreen);
+}
+.settings{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3); 
+}
+.check-box{
+	-fx-effect: dropshadow(gaussian, black, 15, 0, 3, 3);
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+.slider{
+	-fx-effect: dropshadow(gaussian, black, 15, 0, 3, 3);
+}
+.text-field{
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+.tab{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+.text-area{
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+#windowBorder{
+	-fx-background-color: rgba(207,220,192,.54);
+}
+/*Individual button styling is defined here (they are done individually for greater control in the controller when changing CSS by code)*/
+#b0{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;
+}
+#b1{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3); 
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue; 
+}
+#b2{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b3{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b4{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b5{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b6{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b7{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+#b8{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;  
+}
+/*Scoring system styling. "Impact" font is used to catch the users attention*/
+#totalO{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: Impact;
+}
+#totalX{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: Impact;
+}
+#totalTie{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: Impact;
+}
+#oWinCounter{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+}
+#xWinCounter{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+}
+#tieCounter{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+}
+#menuBar{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+#resetScore{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 3, 3);
+	-fx-font-family: "Times New Roman", Times, serif;
+}
+/*How To Play and About button styling is defined here*/
+#alertButtonAbout{
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+}
+#alertButtonHowTo{
+	-fx-focus-color: transparent;
+	-fx-background-insets: -1, 0, 1, 1;
+	-fx-font-weight: bold;
+}

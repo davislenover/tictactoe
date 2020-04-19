@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Davis' Tic Tac Toe - How To Play Window Layout FXML -->
+<!-- This FXML handles the layout portion of the how to play window. All the GUI for it is declared and loaded here -->
+<!-- By Davis Lenover -->
+<!-- April 14th, 2020 -->
+<!-- Please refer to the header in Main.java for instructions on operation of the game -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+
+<!-- Custom pane dimensions for custom window size -->
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+   <children>
+   <!-- All user interaction objects and text is defined here -->
+      <TextArea fx:id="howToText" editable="false" layoutY="8.0" prefHeight="199.0" prefWidth="310.0" text="------------------------How to Play-------------------------&#10;When you start the program, by default, it will be set on a player Vs player game. &#10;All that the players have to do is take turns pressing buttons until someone wins!&#10;To restart the game, press the &quot;Play&quot; button in the &quot;Actions&quot; menu.&#10;&#10;&#10;If you would like to change the game, a settings menu will be open beside the game.&#10;While the game is just starting (the game board is blank) or recently finished (the game board is full), change the settings as desired.&#10;Afterwards, naviagte to the &quot;Play&quot; option in the &quot;Actions&quot; menu to apply new settings.&#10;Please be aware that if the &quot;Random Starting Player&quot; and &quot;A.I. is active&quot; options are both selected and applied, the user must wait until the game is finished to make any changes (to which after the changes are made, press the &quot;Play&quot; button to apply them).&#10;If the settings window is closed, it can be reopened in the &quot;Actions&quot; menu.&#10;&#10;Changing the game mode to a.i. Vs player can be found under the a.i. tab in settings.&#10;Simply select the &quot;A.I. is Active&quot; checkbox and set the desired difficulty using the slider below. Afterwards, select the &quot;Play&quot; option in the &quot;Actions&quot; menu to apply the setting.&#10;Both the player and a.i. will take turns until someone wins/ties.&#10;&#10;Scoring can be reset by going under the &quot;Gameplay&quot; tab in settings and clicking the &quot;Reset Score&quot; button, then, selecting the &quot;Play&quot; option in the &quot;Actions&quot; menu (again, game must be just starting or just finished to do so).&#10;&#10;To quit, simply select the &quot;Quit&quot; option in the &quot;Actions&quot; menu.&#10;Enjoy the game!&#10;&#10;NOTE: Attempting to change ANY settings during play will not work! Please wait until the game board is blank or full before making any changes (the program will not allow any changes if these conditions are not met)!" />
+      <Button id="alertButtonHowTo" fx:id="howToButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="215.0" maxHeight="25.0" maxWidth="308.0" minHeight="25.0" minWidth="308.0" mnemonicParsing="false" onAction="#closeWindowButtonClickHandler" prefHeight="25.0" prefWidth="308.0" text="Ok" />
+   </children>
+</Pane>

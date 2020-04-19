@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Davis' Tic Tac Toe - Game Window Layout FXML -->
+<!-- This FXML handles the layout portion of the main game window. All the GUI for it is declared and loaded here -->
+<!-- By Davis Lenover -->
+<!-- April 14th, 2020 -->
+<!-- Please refer to the header in Main.java for instructions on operation of the game -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="windowBorder" maxHeight="420.0" maxWidth="300.0" minHeight="420.0" minWidth="300.0" prefHeight="420.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Actions">
+            <items>
+            <!-- Menu items under the "Actions" bar are defined here -->
+              <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Play" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Quit" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Settings" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+            <!-- Menu items under the "Help" bar are defined here -->
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="How to Play" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+   <!-- Start of game board definitions, custom width and height are shown -->
+      <GridPane fx:id="gameBoard" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" BorderPane.alignment="TOP_CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+         <!-- All buttons on the game board (gameBoard) are defined here. Their names have been changed to match their array index's -->
+         	<Button fx:id="b0" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="b1" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" />
+            <Button fx:id="b2" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" />
+            <Button fx:id="b3" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="1" />
+            <Button fx:id="b4" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="b5" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="b6" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="2" />
+            <Button fx:id="b7" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="b8" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+         <!-- Scoring text is defined here -->
+            <TextField fx:id="totalO" editable="false" text="Total O Wins:" />
+            <TextField fx:id="totalX" editable="false" text="Total X Wins:" GridPane.rowIndex="1" />
+            <TextField fx:id="totalTie" editable="false" text="Total Ties:" GridPane.rowIndex="2" />
+            <TextField fx:id="oWinCounter" editable="false" prefWidth="12.0" text="0" GridPane.columnIndex="1" />
+            <TextField fx:id="xWinCounter" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tieCounter" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

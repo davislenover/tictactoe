@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Davis' Tic Tac Toe - Settings Layout FXML -->
+<!-- This FXML handles the layout portion of the Settings window. All the GUI for it is declared and loaded here -->
+<!-- By Davis Lenover -->
+<!-- April 14th, 2020 -->
+<!-- Please refer to the header in Main.java for instructions on operation of the game -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="230.0" maxWidth="310.0" minHeight="230.0" minWidth="310.0" prefHeight="230.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+   <children>
+      <TabPane prefHeight="230.0" prefWidth="310.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+        <!-- GamePlay settings tab is defined here -->
+          <Tab text="Gameplay">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="240.0">
+                     <children>
+                     <!-- Custom constraints for custom window sizes -->
+                        <GridPane prefHeight="200.0" prefWidth="310.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                           <!-- All user interaction objects -->
+                              <CheckBox fx:id="randomPlayer" mnemonicParsing="false" onAction="#settingClickHandler" text="Player who goes first is chosen at random" GridPane.columnSpan="2" />
+                              <CheckBox fx:id="secondPlayer" mnemonicParsing="false" onAction="#settingClickHandler" prefWidth="318.0" text="Force player 2 going first" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                              <TextField editable="false" prefWidth="263.0" text="By default, player 1 will go first" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                              <Button fx:id="resetScore" mnemonicParsing="false" onAction="#resetScores" prefHeight="25.0" prefWidth="144.0" text="Reset Score" GridPane.rowIndex="3" />
+                              <TextField editable="false" prefWidth="143.0" text="Press &quot;Play&quot; in the &quot;Actions&quot; menu to apply settings" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <!-- A.I. settings tab is defined here -->
+          <Tab text="A.I.">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="240.0">
+                     <children>
+                        <GridPane prefHeight="200.0" prefWidth="292.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                           <!-- All user interaction objects -->
+                              <Slider fx:id="difficultySlider" onMouseReleased="#difficultysettingClickHandler" prefHeight="14.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="aiCheck" mnemonicParsing="false" onAction="#settingClickHandler" prefHeight="40.0" prefWidth="298.0" text="A.I. is active (will act as player 2)" GridPane.columnSpan="2" />
+                              <TextField editable="false" prefHeight="2.0" prefWidth="253.0" text="Set difficulty (move slider)" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                              <TextField editable="false" prefHeight="2.0" prefWidth="270.0" text="0-25 - Easy | 25-50 Med | 50-75 Hard | 75+ V.Hard" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                              <TextField editable="false" prefHeight="25.0" prefWidth="254.0" text="By default, A.I. is set to 0 (when initially active)" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <!-- Performance settings tab is defined here -->
+            <Tab text="Preformance">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="240.0">
+                     <children>
+                        <GridPane prefHeight="210.0" prefWidth="310.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                           <!-- All user interaction objects -->
+                              <CheckBox fx:id="printAI" mnemonicParsing="false" onAction="#settingClickHandler" prefHeight="17.0" prefWidth="341.0" text="Output A.I. computing to console (debug)" GridPane.columnSpan="2" />
+                              <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="NOTE: Program may become unresonsive for a brief &#10;period of time when the A.I. has been set to active.&#10;This behaviour is NORMAL. The option above is&#10;intended to show what is happening while the program&#10;becomes unresponsive." GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
